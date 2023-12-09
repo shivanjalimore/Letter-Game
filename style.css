@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:#2E86C1; */
+  }
+
+  .container-1
+  {
+    height: 100vh;
+    width: 100%;
+  }
+  #startgame,#chooselevel,#chooselevel3
+  {
+    border: 2px solid black;
+    height: 300px;
+    width: 400px;
+    background-color:lightblue;
+    margin: auto;
+    margin-top: 15%;
+  }
+  .playgame,.choose
+  {
+    padding: 30px 30px 30px 50px;
+    font-size: 45px;
+    font-weight: bolder;
+  
+  }
+
+  .stopgame .text-1
+  {
+    font-size: 45px;
+    font-weight: bolder;
+    padding: 30px 30px 10px 50px
+  }
+  #endgame
+  {
+    
+    z-index: 2;
+    position: absolute;
+    border: 2px solid black;
+    top: 5%;
+    left: 35%;
+    height:315px;
+    width:420px;
+    background-color:lightblue;
+    margin: auto;
+    margin-top: 15%;
+  }
+
+  
+   #container
+  {
+    height: 100vh;
+    width: 100%;
+    background-color:#91c5e7c6 ;
+    
+  }
+  .inner-container
+  {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav_section
+  {
+    flex: 1;
+    /* background-color: blueviolet; */
+  }
+  #timer,#display_time
+  {
+    /* float: right; */
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  .time
+  {
+    float: right;
+    padding: 0% 3% 0% 0%;
+  }
+
+  #display_score,#score
+  {
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  #display_score
+  {
+    padding: 0% 0% 0% 3%;
+  }
+  .game_section
+  {
+    flex: 5;
+    display: flex;
+  }
+  #button_section
+  {
+    flex: 1;
+    /* background-color: rgb(43, 177, 226); */
+  }
+  #blocks
+  {
+    flex: 3;
+    /* background-color: brown; */
+    height:100%;
+    margin: auto;
+  }
+  #city_section
+  {
+    flex: 1;
+    /* background-color: aqua; */
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+  }
+  #words
+  {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+
+  #showlevels
+  {
+     margin-top: 15%;
+     margin-left: 22%;
+     color: white;
+     background-color:green;
+     border-radius: 50px;
+     height: 50px;
+     padding: 10px;
+     border: 2px solid black;
+     font-weight: bolder;
+     font-size: 20px;
+  }
+
+  #level2,#level3,#start
+  {
+    color: white;
+    background-color:green;
+    border-radius: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid black;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  #end
+  {
+    margin-top: 10%;
+    margin-left: 10%;
+    color: white;
+     background-color:red;
+     border-radius: 50px;
+     height: 50px;
+     padding: 10px;
+     border: 2px solid black;
+     font-weight: bolder;
+     font-size: 20px;
+  }
+  
+  #check,#check2,#check3
+  {
+    margin-top: 5%;
+     margin-left: 12%;
+    color: white;
+     background-color:blue;
+     border: 2px solid black;
+     border-radius: 50px;
+     height: 50px;
+      width:100px; 
+     padding: 10px;
+     font-weight: bolder;
+     font-size: 20px;
+  }
+
+  #blocks
+  {
+    background-color:#7FB3D5  ;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+   
+    /* width: 55%; */
+    /* margin: auto; */
+    /* padding: 20px; */
+    
+  }
+  button
+  {
+    box-shadow: 6px 6px rgb(33, 33, 33);
+  }
+  button:active{
+    /* background-color:rgb(77, 77, 215);; */
+    box-shadow: 0 5px #666;
+    transform: translateY(5px);
+}
+  

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Word Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- <button type="button" class="start" onclick="showdiv()">-- Start The Game --</button>
+    <div id="blocks"> </div> -->
+  
+    <div id="startgame" style="position: relative;">
+      <div class="playgame">
+        <label>Would you like to play a game?</label>
+        <button onclick="showdiv()" id="start" style="    margin-top: 15%;
+        margin-left: 18%;">Start Game</button>
+      </div>
+    </div>
+
+   <div id="chooselevel" style="margin-top:10%;
+   position: absolute;
+   margin-left: 37%;
+   z-index: 5;display: none;">
+    <div class="choose">
+      <div><label>Congratulation!</label></div>
+      <div style="margin-top: 20px;">
+        <button type="button" onclick="hidediv()" id="end" style="margin-left: -15px;">Stop</button>
+        <button type="button" onclick="showdiv2()" id="level2" style="background-color:blue;"> Level 2</button>
+      </div>
+    </div>
+   </div>
+
+
+   <div id="chooselevel3" style="margin-top: 15%;
+   position: absolute;
+   margin-left: 37%;
+   z-index: 5;display: none;">
+    <div class="choose">
+      <div><label>Congratulation!</label></div>
+      <div style="margin-top: 20px;">
+        <button type="button" onclick="hidediv()" id="end" style="margin-left: -15px;">Stop</button>
+        <button type="button" onclick="showdiv3()" id="level2" style="background-color:blue;"> Level 3</button>
+      </div>
+    </div>
+   </div>
+
+    <div id="container" style="display: none;position: relative;">
+      <div class="inner-container">
+      <div class="nav_section">
+        <label id="display_score">score :</label>
+        <label  id="score"></label>
+         
+        <label class="time">
+        <label id="display_time">Time :</label>
+        <label id="timer"></label>
+      </label>
+        <!-- <button onclick="showdiv()" id="start">Start Game</button> -->
+       
+
+        <!-- <h3 id="show_city"></h3> -->
+      </div>
+
+      <div class="game_section">
+        <!-- <div class="game_city"> -->
+          <div id="button_section">
+            <div><button onclick="hidediv()" id="end">End Game</button></div>
+            <div><button onclick="check()" id="check" style="display: none;"> Check</button></div>
+            <div><button onclick="check2()" id="check2" style="display: none;    top: 10%;
+              left: -10%;"> Check</button></div>
+            <div><button onclick="check3()" id="check3" style="display: none;    top: 15%;
+              left: -10%;"> Check</button></div>
+          </div>
+         
+
+          <div id="blocks"></div>
+          <div id="city_section">
+            <label id="words"> Words : </label>
+            <div id="city_names"></div>
+          </div>
+        <!-- </div> -->
+      </div>
+
+      <!-- <h2 id="show_city"></h2> -->
+    </div>
+    </div>
+    
+    <div id="endgame" style="display: none;">
+      <div class="stopgame">
+        <div class="text-1"><label>Game has ended. Do you want to play again?</label></div>
+        <div id="button-end">
+        <button onclick="showdiv()" id="start" style="margin-left:10%;margin-top:10%;">Play Again</button>
+        <button onclick="hidediv()" id="end" style="margin-top:10%;">End Game</button>
+      </div>
+      </div>
+    </div>
+
+  </body>
+</html>
