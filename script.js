@@ -72,10 +72,20 @@ function showdiv() {
     }
 }
 
+// function hidediv() {
+//     document.getElementById("blocks").style.display = "none";
+//     window.location.reload();
+// }
+
 function hidediv() {
-    document.getElementById("blocks").style.display = "none";
     window.location.reload();
+    clearInterval(refreshIntervalId); // Stop the timer
+    time = 0; // Reset the time variable to 0
+    document.getElementById("blocks").style.display = "none";
+    document.getElementById("endgame").style.display = "none"; // Hide the endgame display
 }
+
+
 
 let citynames = [];
 let idarray = [];
@@ -164,8 +174,8 @@ function updateCountdown() {
 
     time--;
 
-    if (time <= 0) {
-        //stop the setInterval whe time = 0 for avoid negative time
+    if (time < 0) {
+        //stop the setInterval whe time < 0 for avoid negative time
         clearInterval(refreshIntervalId);
         document.getElementById("endgame").style.display = "block";
     }
