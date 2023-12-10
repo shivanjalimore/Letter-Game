@@ -41,10 +41,50 @@ var city = ["SATARA", "MUMBAI", "THANE", "PUNE", "DELHI"];
 var city2 = ["SATARA", "MUMBAI", "THANE"];
 var city3 = ["SATARA", "MUMBAI"];
 
+let currentLevel = 1; // Initialize the current level to 1 at the beginning of the game
 
 
+function resetGame() {
+    // Clearing currentLevel and stopping intervals
+    currentLevel = 1;
+    clearInterval(refreshIntervalId);
+    time=2*60;
+    refreshIntervalId = setInterval(updateCountdown, 1000); // Start the timer for Level 2
+    updateCountdown(); 
+
+    // Clearing game-related variables, arrays, and scores
+    citynames = [];
+    idarray = [];
+    CharArray = [];
+    count = 0;
+
+    // Clearing UI elements and resetting styles
+    document.getElementById("blocks").innerHTML = "";
+    document.getElementById("city_names").innerHTML = "";
+    document.getElementById("score").innerHTML = "";
+
+    // Resetting visibility and styles of game sections
+    document.getElementById("startgame").style.display = "block";
+    document.getElementById("container").style.display = "none";
+    document.getElementById("endgame").style.display = "none";
+    document.getElementById("chooselevel").style.display = "none";
+    document.getElementById("chooselevel3").style.display = "none";
+    document.getElementById("check").style.display = "none";
+    document.getElementById("check2").style.display = "none";
+    document.getElementById("check3").style.display = "none";
+
+    showdiv();
+}
+
+
+
+// let currentLevel = 1; // Initialize the current level to 1 at the beginning of the game
 //----------------------------------------------------------------------LEVEL - 1 -------------------------------------------------------------
 function showdiv() {
+
+  
+
+
     document.getElementById("startgame").style.display = "none";
     document.getElementById("container").style.display = "block";
     document.getElementById("endgame").style.display = "none";
@@ -54,7 +94,7 @@ function showdiv() {
     document.getElementById("check2").style.display="none";
     document.getElementById("check3").style.display="none";
 
-
+    currentLevel = 1; // Set the current level to 1 when showing level 1
 
     for (let i = 0; i <letters.length; i++) 
     {
@@ -78,11 +118,47 @@ function showdiv() {
 // }
 
 function hidediv() {
-    window.location.reload();
+
+
+
     clearInterval(refreshIntervalId); // Stop the timer
-    time = 0; // Reset the time variable to 0
+
+    // Reset the time variable to the respective initial values for each level
+    if (currentLevel === 1) {
+        time = 2 * 60; // Level 1: 2 minutes
+    } else if (currentLevel === 2) {
+        time = 1.5 * 60; // Level 2: 1.5 minutes
+    } else if (currentLevel === 3) {
+        time = 1 * 60; // Level 3: 1 minute
+    }
+
+    // Reset all game-related variables, arrays, and scores
+    citynames = [];
+    idarray = [];
+    CharArray = [];
+    count = 0;
+
+    // Clear UI elements
+    document.getElementById("blocks").innerHTML = "";
+    document.getElementById("city_names").innerHTML = "";
+    document.getElementById("score").innerHTML = "";
+
+    // Reset displayed elements' style or visibility
     document.getElementById("blocks").style.display = "none";
-    document.getElementById("endgame").style.display = "none"; // Hide the endgame display
+    document.getElementById("endgame").style.display = "none";
+    document.getElementById("chooselevel").style.display = "none";
+    document.getElementById("chooselevel3").style.display = "none";
+    document.getElementById("check").style.display = "none";
+    document.getElementById("check2").style.display = "none";
+    document.getElementById("check3").style.display = "none";
+
+    // Reload the page
+    // window.location.reload();
+    window.location.reload();
+    // clearInterval(refreshIntervalId); // Stop the timer
+    // time = 0; // Reset the time variable to 0
+    // document.getElementById("blocks").style.display = "none";
+    // document.getElementById("endgame").style.display = "none"; // Hide the endgame display
 }
 
 
@@ -159,6 +235,9 @@ function goto_level2() {
     document.getElementById("chooselevel").style.display="block";
     // document.getElementById("endgame").style.display = "block";
     document.getElementById("startgame").style.display = "none";
+
+    currentLevel = 2; // Set the current level to 2 when transitioning to level 2
+
 }
 
 let time = 2 * 60; //minutes * 60 seconds
@@ -194,6 +273,8 @@ function updateCountdown() {
  let CharArray2 = []; 
 
 function showdiv2() {
+
+    // currentLevel = 2;
     
     // Clear UI elements
     document.getElementById("blocks").innerHTML = "";
@@ -232,10 +313,6 @@ function showdiv2() {
     }
 }
 
-function hidediv() {
-    document.getElementById("blocks").style.display = "none";
-    window.location.reload();
-}
 
 function adddiv2(id2) {
     // alert("ID" +id);
@@ -307,6 +384,8 @@ function goto_level3() {
     document.getElementById("chooselevel3").style.display="block";
     document.getElementById("chooselevel").style.display="none";
     document.getElementById("startgame").style.display = "none";
+
+    currentLevel = 3; // Set the current level to 3 when transitioning to level 3
 }
 
 //---------------------------------------------------- LEVEL - 3 ------------------------------------------------------
@@ -319,6 +398,8 @@ let CharArray3 = [];
 
 function showdiv3() {
    
+
+    // currentLevel = 3;
    // Clear UI elements
    document.getElementById("blocks").innerHTML = "";
    document.getElementById("city_names").innerHTML = "";
@@ -357,10 +438,10 @@ function showdiv3() {
    }
 }
 
-function hidediv() {
-   document.getElementById("blocks").style.display = "none";
-   window.location.reload();
-}
+// function hidediv() {
+//    document.getElementById("blocks").style.display = "none";
+//    window.location.reload();
+// }
 
 
 
