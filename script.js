@@ -51,6 +51,8 @@ function resetGame() {
     time=2*60;
     refreshIntervalId = setInterval(updateCountdown, 1000); // Start the timer for Level 2
     updateCountdown(); 
+ 
+    console.log("resetgame");
 
     // Clearing game-related variables, arrays, and scores
     citynames = [];
